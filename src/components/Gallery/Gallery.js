@@ -32,6 +32,7 @@ const Gallery = ({ images }) => {
       {images.map((image, i) => (
         <img src={image} alt="car" key={i} className={cnames(i)} />
       ))}
+
       <button
         className="arrow left"
         onClick={() => changeHandler('left')}

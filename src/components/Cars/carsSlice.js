@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const carsSlice = createSlice({
-  name: 'weather',
+  name: 'cars',
   initialState: {
     cars: [],
     isLoaded: false
