@@ -1,0 +1,54 @@
+@import '../../utils/variables.scss';
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  grid-gap: 20px;
+}
+
+.cars-item {
+  background-color: $white;
+  border: 1px solid $gray-dark;
+}
+
+.cars-item__details {
+  padding: 1em;
+
+  h3 {
+    margin-bottom: 0.5em;
+  }
+
+  ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .price {
+    margin-top: 1em;
+    color: $green;
+    background-color: $gray-light;
+    padding: 0.3em;
+    text-align: center;
+  }
+}
+
+.get-button {
+  background-color: $blue;
+  color: $white;
+  margin-top: 1em;
+  padding: 0.8em;
+  border-radius: 10em;
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background-color: $blue-dark;
+  }
+
+  &:disabled {
+    background-color: $gray-dark;
+    cursor: default;
+  }
+}
