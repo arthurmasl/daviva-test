@@ -20,7 +20,7 @@ const Cart = () => {
             <button onClick={() => removeHandler(car.id)}>remove</button>
           </li>
         ))}
-        <li>visa kaina: {fullPrice} €</li>
+        <li>visa kaina: {fullPrice.toFixed(2)} €</li>
       </ul>
     );
   } else {
