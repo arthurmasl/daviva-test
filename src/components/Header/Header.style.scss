@@ -1,7 +1,19 @@
 @import '../../utils/variables.scss';
 
 .header {
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid $gray-dark;
   padding-bottom: 1em;
   margin-bottom: 2em;
+
+  h1 {
+    margin-right: 2em;
+  }
+
+  a {
+    margin-right: 1em;
+    color: $blue;
+    text-decoration: none;
+  }
 }

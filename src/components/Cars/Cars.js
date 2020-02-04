@@ -11,9 +11,9 @@ const Cars = () => {
   const isLoaded = useSelector(selectIsLoaded);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getCar);
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getCar);
+  // }, [dispatch]);
 
   const addHandler = () => {
     dispatch(getCar);

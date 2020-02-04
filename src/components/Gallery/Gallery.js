@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Gallery.style.scss';
 
-const Gallery = ({ images }) => {
+const Gallery = ({ images, full }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentCn = i => currentIndex === i && 'current';
   const prevCn = i => i === currentIndex - 1 && 'prev';
@@ -28,7 +28,7 @@ const Gallery = ({ images }) => {
   };
 
   return (
-    <div className="gallery">
+    <div className={`gallery ${full && 'full'}`}>
       {images.map((image, i) => (
         <img src={image} alt="car" key={i} className={cnames(i)} />
       ))}

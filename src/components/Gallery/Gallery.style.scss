@@ -8,6 +8,11 @@
   position: relative;
   padding-bottom: 20%;
 
+  &.full {
+    padding-bottom: 50%;
+    display: grid;
+  }
+
   img {
     left: -200%;
     width: 100%;
