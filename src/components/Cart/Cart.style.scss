@@ -1,0 +1,34 @@
+@import '../../utils/variables.scss';
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead {
+    font-weight: bold;
+
+    button {
+      font-size: inherit;
+      padding: 0;
+      text-transform: capitalize;
+      border: 0;
+      background: transparent;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  tr {
+    border-bottom: 1px solid $gray-dark;
+
+    td {
+      padding: 1em;
+    }
+  }
+}
+
+.full-price {
+  font-weight: bold;
+  margin-top: 2em;
+  margin-left: 1em;
+}

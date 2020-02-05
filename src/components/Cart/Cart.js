@@ -1,27 +1,29 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { selectCart, selectFullCartPrice, removeFromCart } from './cartSlice';
+import { useSelector } from 'react-redux';
+import { selectCart, selectFullCartPrice } from './cartSlice';
+import './Cart.style.scss';
+import TableHead from './TableHead';
+import TableItem from './TableItem';
 
 const Cart = () => {
-  const dispatch = useDispatch();
   const cart = useSelector(selectCart);
   const fullPrice = useSelector(selectFullCartPrice);
 
-  const removeHandler = id => {
-    dispatch(removeFromCart(id));
-  };
-
   if (cart.length) {
     return (
-      <ul>
-        {cart.map(car => (
-          <li key={car.id}>
-            {car.marke} {car.modelis} ({car.metai}) - {car.kaina} €
-            <button onClick={() => removeHandler(car.id)}>remove</button>
-          </li>
-        ))}
-        <li>visa kaina: {fullPrice.toFixed(2)} €</li>
-      </ul>
+      <React.Fragment>
+        <table className="cart-table">
+          <TableHead />
+
+          <tbody>
+            {cart.map(car => (
+              <TableItem {...car} key={car.id} />
+            ))}
+          </tbody>
+        </table>
+
+        <div className="full-price">Visa kaina: {fullPrice.toFixed(2)} €</div>
+      </React.Fragment>
     );
   } else {
     return 'cart is empty';

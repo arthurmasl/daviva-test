@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { getCar } from '../Cars/getCar';
 
 import { selectCarsData, selectIsLoaded } from '../Cars/carsSlice';
@@ -10,10 +10,6 @@ const Cars = () => {
   const cars = useSelector(selectCarsData);
   const isLoaded = useSelector(selectIsLoaded);
   const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   dispatch(getCar);
-  // }, [dispatch]);
 
   const addHandler = () => {
     dispatch(getCar);
