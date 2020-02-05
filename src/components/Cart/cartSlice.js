@@ -33,7 +33,10 @@ export const selectCart = createSelector(
     cars
       .filter(car => ids.includes(car.id))
       .sort((a, b) =>
-        a[sortType].localeCompare(b[sortType], 'en', { sensitivity: 'base' })
+        a[sortType].localeCompare(b[sortType], 'en', {
+          sensitivity: 'base',
+          numeric: true
+        })
       )
 );
 
