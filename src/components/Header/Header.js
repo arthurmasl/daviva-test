@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.style.scss';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { selectCartIds } from '../Cars/carsSlice';
+import { selectCartIds } from '../Cart/cartSlice';
 
 const Header = () => {
   const cartIds = useSelector(selectCartIds);

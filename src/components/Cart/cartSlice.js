@@ -1,5 +1,5 @@
 import { createSlice, createSelector } from '@reduxjs/toolkit';
-import { selectCartIds, selectCarsData } from '../Cars/carsSlice';
+import { selectCarsData } from '../Cars/carsSlice';
 
 const cartSlice = createSlice({
   name: 'cars',
@@ -18,6 +18,8 @@ const cartSlice = createSlice({
     }
   }
 });
+
+export const selectCartIds = state => state.cart.cart;
 
 export const selectCart = createSelector(
   [selectCarsData, selectCartIds],
